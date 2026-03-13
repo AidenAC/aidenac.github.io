@@ -147,6 +147,12 @@ h1, h2, h3 {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     text-align: center;
+    transition: all 0.3s ease;
+}
+
+.release:hover, .event:hover, .album:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .release img, .album img {
@@ -162,12 +168,13 @@ h1, h2, h3 {
     color: #fff;
     padding: 0.5rem 1rem;
     border-radius: 4px;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
     margin: 0.5rem;
 }
 
 .btn:hover {
     background-color: #B8860B;
+    transform: scale(1.05);
 }
 
 /* Contact Form */
@@ -195,6 +202,10 @@ textarea {
     resize: vertical;
 }
 
+button {
+    border: none;
+}
+
 .social-links {
     display: flex;
     justify-content: center;
@@ -206,11 +217,12 @@ textarea {
     color: #fff;
     padding: 0.5rem 1rem;
     border-radius: 4px;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
 }
 
 .social-link:hover {
     background-color: #303F9F;
+    transform: scale(1.05);
 }
 
 /* Footer */
