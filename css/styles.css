@@ -11,6 +11,9 @@ body {
     color: #333333;
     background-color: #E8E8E8;
     position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 body::before {
@@ -89,6 +92,7 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem 1rem;
+    flex: 1;
 }
 
 section {
@@ -107,6 +111,8 @@ h1, h2, h3 {
     color: #fff;
     position: relative;
     overflow: hidden;
+    width: 70vw;
+    margin-left: calc(-50vw + 50% + 15vw);
 }
 
 #hero::before {
@@ -136,8 +142,9 @@ h1, h2, h3 {
 
 /* Grid Layout */
 .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
 }
 
@@ -148,6 +155,8 @@ h1, h2, h3 {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     text-align: center;
     transition: all 0.3s ease;
+    flex: 1 1 300px;
+    min-width: 300px;
 }
 
 .release:hover, .event:hover, .album:hover {
@@ -262,6 +271,7 @@ footer {
     }
 
     .grid {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: center;
     }
 }
